@@ -42,14 +42,14 @@ describe('creating a debtor account', () => {
          
         cy.findByRole('combobox') //the input field of the contact is not acessible
         .type(studentSurname)
-        .wait(500) //hacky
+        .wait(3000) //hacky
         .type(`{backspace}`)
         .type(`{backspace}`) // hacky as likely react-query isn't calling the community endpoint to get the recently created user
         
         cy.selectFromDropdown(studentFullName)
         
         cy.findByText(studentFullName).should('be.visible')
-        cy.wait(1000) //super hacky
+        cy.wait(3000) //super hacky
         cy.findByRole('button', {name: /next/i}).click()
         cy.findByRole('button', {name: /save/i}).click()
 

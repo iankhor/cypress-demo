@@ -2,8 +2,7 @@ const { defineConfig } = require("cypress");
 require('dotenv').config()
 
 module.exports = defineConfig({
-  viewportWidth: 1536,
-  viewportHeight: 960,
+  video: false,
   env: {
     USERNAME: process.env.CYPRESS_USERNAME,
     PASSWORD: process.env.CYPRESS_PASSWORD,
