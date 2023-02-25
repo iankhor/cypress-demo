@@ -9,5 +9,8 @@
   },
   "scripts": {
     "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
