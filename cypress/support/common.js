@@ -7,3 +7,10 @@ Cypress.Commands.add('login', () => {
 
     cy.url().should('include', '/staffapp/landing')
 })
+
+//hacky
+Cypress.Commands.add('selectFromDropdown', (optionValue, role = 'button') => {
+    cy.get('.rc-virtual-list').last().within(() => {
+        cy.findByRole(role, {name: new RegExp(optionValue, "i")}).click()
+    })
+})
