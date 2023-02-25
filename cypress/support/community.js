@@ -51,7 +51,7 @@ Cypress.Commands.add('createStudent', ({givenName, surname} = {...defaultStudent
     cy.findByRole('button', {name: /next/i}).click()
     cy.findByRole('button', {name: /next/i}).click()
     
-
+    cy.wait(2000) // hacky
     // contact's spouse
     cy.get('form[id="addAspouse"]').within(() => {
         cy.get('input[type="radio"]').last().click() //hacky

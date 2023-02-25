@@ -3,3 +3,4 @@
 3. populate .env file
 4. - To run with Cypress GUI, run `npm run cypress:gui`
    - To run with Cypress headless, run `npm run cypress:headless`
+   - To run via docker, run `docker compose up`
